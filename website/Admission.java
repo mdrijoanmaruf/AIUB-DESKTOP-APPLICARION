@@ -15,7 +15,7 @@ public class Admission extends JFrame {
 
 	private JTextField tf1, tf2, tf3, tf4, tf5, tf6, tf7, tf8, tf9, tf10; 
 	
-	private ImageIcon img,img2,img10;
+	// private ImageIcon img,img2,img10;
 	private JTextArea area2, area1; 
 	private JRadioButton  maleButton, femaleButton;
 	private JFileChooser f1; 
@@ -26,8 +26,7 @@ public class Admission extends JFrame {
 	private JButton addButton, deleteButton, clearButton,backbutton, updateButton;
 	private DefaultTableModel  model; // row chara table create korbe
 	private String columsData [] = {"Name","Email","Contuct Number","Nationality"};
-	private String rowsData [] = new String[4]; // user theke input nebo String array;
-	// Default constructor to 
+	private String rowsData [] = new String[4]; 
 	// initialize the parameters 
 	 public Admission() 
 	{ 		
@@ -52,6 +51,25 @@ public class Admission extends JFrame {
 		// Creating Container
 		c = this.getContentPane(); 
 		c.setLayout(null);
+
+		// Back to Home
+        JButton backToHome = new JButton("Home");
+        backToHome.setFont(new Font("Arial" , Font.BOLD , 20));
+        backToHome.setBounds(10,20,100,30);
+        backToHome.setBackground(Color.GRAY);
+        backToHome.setForeground(Color.WHITE);
+        c.add(backToHome);
+
+        // Back to Home button Action Listenter
+        backToHome.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
+                HomePage h2 = new HomePage();
+                h2.setVisible(true);
+                dispose();
+            }
+        });
+
+		// Creating Font
 		font = new Font("Arial",Font.BOLD,36);
 		font2 = new Font("Arial",Font.BOLD,12);
 		font3 = new Font("Arial",Font.BOLD,14);

@@ -15,6 +15,7 @@ import javax.swing.JTextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import portal.ShawonPortal;
+import portal.ShawonPortalHome;
 
 public class Login extends JFrame {
     String[] studentId = { "23-53347-3", "23-53193-3", "23-53354-3", "23-54025-3" };
@@ -51,15 +52,15 @@ public class Login extends JFrame {
         c.add(backToHome);
 
         // Back to Home button Action Listenter
-        // Log In Button Action Listener
         backToHome.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e){
                 HomePage h2 = new HomePage();
                 h2.setVisible(true);
                 dispose();
             }
-            });
-
+        });
+        
+        // Log In Button Action Listener
         // Username :
         JTextField username = new JTextField("23-53193-3");
         username.setFont(new Font("Arial" , Font.BOLD, 20));
@@ -123,8 +124,8 @@ public class Login extends JFrame {
                     //     rijoan.setVisible(true); // Set the new frame visible
                     // }
                     if (enteredStudentId.equals("23-53193-3")) {
-                        ShawonPortal shawon = new ShawonPortal();
-                        shawon.setVisible(true); // Set the new frame visible
+                        ShawonPortalHome shawon = new ShawonPortalHome();
+                        shawon.setVisible(true); 
                     }
                     // if (enteredStudentId.equals("23-53354-3")) {
                     //     AnikPortal anik = new AnikPortal();

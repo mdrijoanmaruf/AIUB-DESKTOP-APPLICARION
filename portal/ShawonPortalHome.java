@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ShawonPortalHome extends JFrame{
-    ShawonPortalHome(){
+    public ShawonPortalHome(){
         init();
     }
     public void init(){
@@ -19,7 +19,7 @@ public class ShawonPortalHome extends JFrame{
         this.setLocationRelativeTo(null);
 
         // Creating Background Image
-        ImageIcon backgroundImage = new ImageIcon("Img/Shawon.png");
+        ImageIcon backgroundImage = new ImageIcon("Img/ShawonHome.png");
         JLabel bgImage = new JLabel(backgroundImage);
         bgImage.setLayout(new BorderLayout());
         this.setContentPane(bgImage);
@@ -92,15 +92,43 @@ public class ShawonPortalHome extends JFrame{
         }
         });
 
-        
         // Profile Button Action Listener
         profile.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e){
-            ShawonPortalHome shawonHome = new ShawonPortalHome();
+            ShawonPortal shawonHome = new ShawonPortal();
             shawonHome.setVisible(true);
             dispose();
         }
         });
+        
+        // Courses Button Action Listener
+        courses.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e){
+            Courses c1 = new Courses();
+            c1.setVisible(true);
+            dispose();
+        }
+        });
+
+        // Result Button Action Listener
+        result.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e){
+            ShawonResult cr1 = new ShawonResult();
+            cr1.setVisible(true);
+            dispose();
+        }
+        }); 
+
+        // Regestration Button Action Listener
+        regestration.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e){
+            RegestrationCourses r1 = new RegestrationCourses();
+            r1.setVisible(true);
+            dispose();
+        }
+        }); 
+
+        
 
         // LogOut Button Action Listener
         logOut.addActionListener(new ActionListener() {
