@@ -1,5 +1,7 @@
 package portal;
 
+import website.Login;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -88,33 +90,59 @@ public class ShawonPortal extends JFrame {
 
         // Home Button Action Listener
         home.addActionListener(new ActionListener() {
-        public void actionPerformed(ActionEvent e){
-            ShawonPortalHome shawonHome = new ShawonPortalHome();
-            shawonHome.setVisible(true);
-            dispose();
-        }
+            public void actionPerformed(ActionEvent e){
+                ShawonPortalHome shawonHome = new ShawonPortalHome();
+                shawonHome.setVisible(true);
+                dispose();
+            }
         });
 
-        
         // Profile Button Action Listener
         profile.addActionListener(new ActionListener() {
-        public void actionPerformed(ActionEvent e){
-            ShawonPortalHome shawonHome = new ShawonPortalHome();
-            shawonHome.setVisible(true);
-            dispose();
-        }
+            public void actionPerformed(ActionEvent e){
+                ShawonPortal shawonHome = new ShawonPortal();
+                shawonHome.setVisible(true);
+                dispose();
+            }
         });
 
-         // LogOut Button Action Listener
-         logOut.addActionListener(new ActionListener() {
+        // Courses Button Action Listener
+        courses.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e){
-                // JOptionPane.showMessageDialog(null, "Log Out Successful!", "Confirmatioin", -1);
-                // dispose();
+                Courses c1 = new Courses();
+                c1.setVisible(true);
+                dispose();
+            }
+        });
+
+        // Result Button Action Listener
+        result.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
+                ShawonResult cr1 = new ShawonResult();
+                cr1.setVisible(true);
+                dispose();
+            }
+        });
+
+        // Registration Button Action Listener
+        regestration.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
+                RegestrationCourses r1 = new RegestrationCourses();
+                r1.setVisible(true);
+                dispose();
+            }
+        });
+
+        // LogOut Button Action Listener
+        logOut.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
                 int result = JOptionPane.showConfirmDialog(null, "Do you want to Log Out?", "Confirmation", JOptionPane.YES_NO_OPTION);
-        
+
                 if (result == JOptionPane.YES_OPTION) {
+                    Login l1 = new Login();
+                    l1.setVisible(true);
                     dispose();
-                } 
+                }
             }
         });
 

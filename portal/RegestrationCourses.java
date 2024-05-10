@@ -1,6 +1,7 @@
 package portal;
 
 import website.HomePage;
+import website.Login;
 
 import javax.swing.*;
 import java.awt.*;
@@ -337,7 +338,7 @@ public class RegestrationCourses extends JFrame {
 			}
 		});
 
-		// Regestration Button Action Listener
+		// Registration Button Action Listener
 		regestration.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e){
 				RegestrationCourses r1 = new RegestrationCourses();
@@ -349,11 +350,11 @@ public class RegestrationCourses extends JFrame {
 		// LogOut Button Action Listener
 		logOut.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e){
-				// JOptionPane.showMessageDialog(null, "Log Out Successful!", "Confirmatioin", -1);
-				// dispose();
 				int result = JOptionPane.showConfirmDialog(null, "Do you want to Log Out?", "Confirmation", JOptionPane.YES_NO_OPTION);
 
 				if (result == JOptionPane.YES_OPTION) {
+					Login l1 = new Login();
+					l1.setVisible(true);
 					dispose();
 				}
 			}
