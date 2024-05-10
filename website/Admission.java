@@ -1,7 +1,6 @@
 package website;
 import javax.swing.*; 
 import java.awt.*;
-import java.awt.event.*; 
 import java.awt.event.ActionEvent; 
 import java.awt.event.ActionListener; 
 import java.awt.print.*; 
@@ -11,7 +10,7 @@ import javax.swing.table.DefaultTableModel;
 
 public class Admission extends JFrame { 
 
-	private JLabel labeL1, labeL2, labeL3, labeL4, labeL5, labeL6, labeL7, labeL8, labeL9, labeL10, labeL11, labeL12, labeL13, labeL14, l15, labeL15,imgLabe2; 
+	private JLabel labeL1, labeL2, labeL3, labeL4, labeL5, labeL6, labeL7, labeL8, labeL9, labeL10, labeL11, labeL12, labeL13, labeL14, labeL15; 
 
 	private JTextField tf1, tf2, tf3, tf4, tf5, tf6, tf7, tf8, tf9, tf10; 
 	

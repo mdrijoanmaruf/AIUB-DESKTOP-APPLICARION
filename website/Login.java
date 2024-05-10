@@ -14,7 +14,6 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import portal.ShawonPortal;
 import portal.ShawonPortalHome;
 
 public class Login extends JFrame {
