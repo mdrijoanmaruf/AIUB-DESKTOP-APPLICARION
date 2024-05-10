@@ -124,7 +124,8 @@ public class Login extends JFrame {
                     // }
                     if (enteredStudentId.equals("23-53193-3")) {
                         ShawonPortalHome shawon = new ShawonPortalHome();
-                        shawon.setVisible(true); 
+                        shawon.setVisible(true);
+                        dispose();
                     }
                     // if (enteredStudentId.equals("23-53354-3")) {
                     //     AnikPortal anik = new AnikPortal();

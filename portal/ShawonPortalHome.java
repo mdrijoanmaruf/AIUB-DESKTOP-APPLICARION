@@ -126,16 +126,19 @@ public class ShawonPortalHome extends JFrame{
             r1.setVisible(true);
             dispose();
         }
-        }); 
-
-        
+        });
 
         // LogOut Button Action Listener
         logOut.addActionListener(new ActionListener() {
-        public void actionPerformed(ActionEvent e){
-            JOptionPane.showMessageDialog(null, "Log Out Successful!", "Confirmatioin", -1);
-            dispose();
-        }
+            public void actionPerformed(ActionEvent e){
+                // JOptionPane.showMessageDialog(null, "Log Out Successful!", "Confirmatioin", -1);
+                // dispose();
+                int result = JOptionPane.showConfirmDialog(null, "Do you want to Log Out?", "Confirmation", JOptionPane.YES_NO_OPTION);
+
+                if (result == JOptionPane.YES_OPTION) {
+                    dispose();
+                }
+            }
         });
     }
 }

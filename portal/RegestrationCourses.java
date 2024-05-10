@@ -1,5 +1,7 @@
 package portal;
 
+import website.HomePage;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent; 
@@ -45,36 +47,6 @@ public class RegestrationCourses extends JFrame {
         Container c = this.getContentPane();
         c.setLayout(null);
 
-		
-		// img = new ImageIcon(getClass().getResource("Homeicon.png"));
-		// this.setIconImage(img.getImage());
-		
-		// img10 = new ImageIcon(getClass().getResource("back.jpg"));
-		// backbutton = new JButton(img10);
-		// backbutton.setBounds(0 ,5 ,120 ,37);
-		// c.add(backbutton);
-		// backbutton.addActionListener(new ActionListener(){
-		// 	@Override
-		// 	public void actionPerformed(ActionEvent e){
-		// 		dispose();
-		// 		Login ab=new Login();
-		// 		ab.setVisible(true);
-				
-		// 	}	
-		// });
-		
-		// f = new Font("Arial", Font.BOLD,26);
-		// labelBachelor = new JLabel("Bachelor of  Computer Science And Engineering");
-		// labelBachelor.setBounds(300, 20, 680, 30);
-		// labelBachelor.setFont(f);
-		// c.add(labelBachelor);
-		
-		// //JButton
-		// ConfirmRegistration = new JButton("Confirm Registration");
-		// ConfirmRegistration.setBounds(500,60, 200, 40);
-		// ConfirmRegistration.setForeground(Color.WHITE);
-		// ConfirmRegistration.setBackground(new Color(0, 78, 162));
-		// c.add(ConfirmRegistration);
 		
 		// labelDataBase
 		f1  = new Font("Arial", Font.BOLD, 16);
@@ -148,7 +120,7 @@ public class RegestrationCourses extends JFrame {
 		
 		//Cenglish2
 		Cenglish2 = new JCheckBox("DS202|R|[28/40]Monday 12.30.00 PM-2.00 PM Theory]");
-		Cenglish2.setBounds(250,440,350,25);
+		Cenglish2.setBounds(250,435,350,25);
 		Cenglish2.setFont(f2);
 		Cenglish2.setBackground(Color.WHITE);
 		c.add(Cenglish2);
@@ -172,7 +144,7 @@ public class RegestrationCourses extends JFrame {
 		grpEnglish.add(Cenglish22);
 		
 		//labelDataStructure
-		labelDataStructure = new JLabel("DATA STRUCTURE Credit 3 :");
+		labelDataStructure = new JLabel("Data Structure Credit 3 :");
 		labelDataStructure.setBounds(650,80, 240, 40);//+270
 		labelDataStructure.setFont(f1);
 		c.add(labelDataStructure);
@@ -185,13 +157,13 @@ public class RegestrationCourses extends JFrame {
 		c.add(CdataStructure);
 		
 		CdataStructure1 = new JCheckBox("DS510|F|[23/40]Monday 9.30 AM-10.30 AM Theory]");
-		CdataStructure1.setBounds(650,155,350,25);
+		CdataStructure1.setBounds(650,165,350,25);
 		CdataStructure1.setFont(f2);
 		CdataStructure1.setBackground(Color.WHITE);
 		c.add(CdataStructure1);
 		
 		CdataStructure2 = new JCheckBox("DS202|G|[31/40]Tuesday 9.30 AM-10.30 AM Theory]");
-		CdataStructure2.setBounds(650,185,350,25);
+		CdataStructure2.setBounds(650,200,350,25);
 		CdataStructure2.setFont(f2);
 		CdataStructure2.setBackground(Color.WHITE);
 		c.add(CdataStructure2);
@@ -204,8 +176,8 @@ public class RegestrationCourses extends JFrame {
 		
 		//labelDataStructureLab
 		
-		labelDataStructureLab = new JLabel("DATA STRUCTURE LAB Credit 1:");
-		labelDataStructureLab.setBounds(650, 220, 270, 40);
+		labelDataStructureLab = new JLabel("Data Structure Lab Credit 1:");
+		labelDataStructureLab.setBounds(650, 230, 270, 40);
 		labelDataStructureLab.setFont(f1);
 		c.add(labelDataStructureLab);
 		
@@ -213,18 +185,18 @@ public class RegestrationCourses extends JFrame {
 		//CdataStructureLab
 		CdataStructureLab = new JCheckBox("DS304|I|[31/40]Tuesday 9.30 AM-10.30 AM LAB]");
 		c.add(CdataStructureLab);
-		CdataStructureLab.setBounds(650,270,350,25);
+		CdataStructureLab.setBounds(650,280,350,25);
 		CdataStructureLab.setFont(f2);
 		CdataStructureLab.setBackground(Color.WHITE);
 		
 		CdataStructureLab1 = new JCheckBox("DS303|H|[31/40]Thusday 9.30 AM-10.30 AM LAB]");
-		CdataStructureLab1.setBounds(650,305,350,25);
+		CdataStructureLab1.setBounds(650,315,350,25);
 		CdataStructureLab1.setFont(f2);
 		CdataStructureLab1.setBackground(Color.WHITE);
 		c.add(CdataStructureLab1);
 		
 		CdataStructureLab2 = new JCheckBox("DS306|D|[31/40]Thusday 9.30 AM-10.30 AM LAB]");
-		CdataStructureLab2.setBounds(650,340,350,25);
+		CdataStructureLab2.setBounds(650,350,350,25);
 		CdataStructureLab2.setFont(f2);
 		CdataStructureLab2.setBackground(Color.WHITE);
 		c.add(CdataStructureLab2);
@@ -266,7 +238,166 @@ public class RegestrationCourses extends JFrame {
 		grpMath.add(Cmath1);
 		grpMath.add(Cmath11);
 		grpMath.add(Cmath12);
-			
+
+		JButton confirm = new JButton("Confirm Registration");
+		confirm.setFont(new Font("Arial" , Font.BOLD , 20));
+		confirm.setForeground(Color.BLACK);
+		confirm.setBackground(Color.LIGHT_GRAY);
+		confirm.setBounds(460,570,300,50);
+		c.add(confirm);
+
+		// Creating Navigtion side bar
+
+		// Home
+		Font buttonFont = new Font("Arial", Font.BOLD , 14);
+		JButton home = new JButton("Home");
+		home.setFont(buttonFont);
+		home.setBounds(80,123,140,25);
+		home.setBackground(Color.GRAY);
+		home.setForeground(Color.WHITE);
+		c.add(home);
+
+
+		// Profile
+		JButton profile = new JButton("Profile");
+		profile.setFont(buttonFont);
+		profile.setBounds(80,171,140,25);
+		profile.setBackground(Color.GRAY);
+		profile.setForeground(Color.WHITE);
+		c.add(profile);
+
+		// Courses
+		JButton courses = new JButton("Course List");
+		courses.setFont(buttonFont);
+		courses.setBounds(80,223,140,25);
+		courses.setBackground(Color.GRAY);
+		courses.setForeground(Color.WHITE);
+		c.add(courses);
+
+
+		// Result
+		JButton result = new JButton("Result");
+		result.setFont(buttonFont);
+		result.setBounds(80,273,140,25);
+		result.setBackground(Color.GRAY);
+		result.setForeground(Color.WHITE);
+		c.add(result);
+
+
+		// Regestration
+		JButton regestration = new JButton("Regestration");
+		regestration.setFont(buttonFont);
+		regestration.setBounds(80,324,140,25);
+		regestration.setBackground(Color.GRAY);
+		regestration.setForeground(Color.WHITE);
+		c.add(regestration);
+
+
+		// log Out
+		JButton logOut = new JButton("Log Out");
+		logOut.setFont(buttonFont);
+		logOut.setBounds(80,375,140,25);
+		logOut.setBackground(Color.GRAY);
+		logOut.setForeground(Color.WHITE);
+		c.add(logOut);
+
+		// Home Button Action Listener
+		home.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e){
+				ShawonPortalHome shawonHome = new ShawonPortalHome();
+				shawonHome.setVisible(true);
+				dispose();
+			}
+		});
+
+		// Profile Button Action Listener
+		profile.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e){
+				ShawonPortal shawonHome = new ShawonPortal();
+				shawonHome.setVisible(true);
+				dispose();
+			}
+		});
+
+		// Courses Button Action Listener
+		courses.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e){
+				Courses c1 = new Courses();
+				c1.setVisible(true);
+				dispose();
+			}
+		});
+
+		// Result Button Action Listener
+		result.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e){
+				ShawonResult cr1 = new ShawonResult();
+				cr1.setVisible(true);
+				dispose();
+			}
+		});
+
+		// Regestration Button Action Listener
+		regestration.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e){
+				RegestrationCourses r1 = new RegestrationCourses();
+				r1.setVisible(true);
+				dispose();
+			}
+		});
+
+		// LogOut Button Action Listener
+		logOut.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e){
+				// JOptionPane.showMessageDialog(null, "Log Out Successful!", "Confirmatioin", -1);
+				// dispose();
+				int result = JOptionPane.showConfirmDialog(null, "Do you want to Log Out?", "Confirmation", JOptionPane.YES_NO_OPTION);
+
+				if (result == JOptionPane.YES_OPTION) {
+					dispose();
+				}
+			}
+		});
+
+
+		// Confirm button Action Listener
+		confirm.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e){
+				StringBuilder selectedCourses = new StringBuilder("Selected Courses:\n");
+				boolean atLeastOneSelected = false; // Flag to check if at least one item is selected
+
+				// Array of checkbox groups
+				JCheckBox[][] checkboxGroups = {
+						{CdataBase, CdataBase1, CdataBase2},
+						{CdataBaseLab, CdataBaseLab1, CdataBaseLab2},
+						{Cenglish2, Cenglish21, Cenglish22},
+						// Add arrays for other course categories similarly
+				};
+
+				// Iterate over each group
+				for (JCheckBox[] group : checkboxGroups) {
+					// Iterate over each checkbox in the group
+					for (JCheckBox checkbox : group) {
+						// Check if the checkbox is selected
+						if (checkbox.isSelected()) {
+							// Append the selected item to the StringBuilder
+							selectedCourses.append(checkbox.getText()).append("\n");
+							atLeastOneSelected = true; // Set the flag to true if at least one item is selected
+						}
+					}
+				}
+
+				// Show the selected courses in a JOptionPane only if at least one item is selected
+				if (atLeastOneSelected) {
+					JOptionPane.showMessageDialog(null , selectedCourses.toString(), "Registration Complete!", JOptionPane.INFORMATION_MESSAGE);
+				} else {
+					JOptionPane.showMessageDialog(null , "Please select Courses.", "No Courses Selected", JOptionPane.WARNING_MESSAGE);
+				}
+			}
+		});
+
+
+
 	}
 	
 	public static void main(String[] args) {
