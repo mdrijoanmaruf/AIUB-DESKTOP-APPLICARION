@@ -1,7 +1,7 @@
 # AIUB-DESKTOP-APPLICARION
 
 ## Porject Member
-* Md Rijoan Maruf (23-53347-3
-* Md Rashedul Islam Anik
-* Md Raisul Islam
-* Md Tasauf Islam
+* MD. Rijoan Maruf (23-53347-3)
+* MD. Rashedul Islam Shawon (23-53193-3)
+* MD. Raisul Islam (23-53354-3)
+* MD. Tasauf Islam (23-54025-3)
