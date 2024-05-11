@@ -15,8 +15,7 @@ import javax.swing.JTextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import portal.RijoanHome;
-import portal.ShawonPortalHome;
+import portal.*;
 
 public class Login extends JFrame {
     String[] studentId = { "23-53347-3", "23-53193-3", "23-53354-3", "23-54025-3" };
@@ -52,7 +51,7 @@ public class Login extends JFrame {
         backToHome.setForeground(Color.WHITE);
         c.add(backToHome);
 
-        // Back to Home button Action Listenter
+        // Back to Home button Action Listener
         backToHome.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e){
                 HomePage h2 = new HomePage();
@@ -122,21 +121,21 @@ public class Login extends JFrame {
                     JOptionPane.showMessageDialog(null, "Log In Successful!");
                      if (enteredStudentId.equals("23-53347-3")) {
                          RijoanHome rijoan = new RijoanHome();
-                         rijoan.setVisible(true); // Set the new frame visible
+                         rijoan.setVisible(true);
                      }
                     if (enteredStudentId.equals("23-53193-3")) {
                         ShawonPortalHome shawon = new ShawonPortalHome();
                         shawon.setVisible(true);
                         dispose();
                     }
-                    // if (enteredStudentId.equals("23-53354-3")) {
-                    //     AnikPortal anik = new AnikPortal();
-                    //     anik.setVisible(true); // Set the new frame visible
-                    // }
-                    // if (enteredStudentId.equals("23-54025-3")) {
-                    //     AnikPortal anik = new AnikPortal();
-                    //     anik.setVisible(true); // Set the new frame visible
-                    // }
+                     if (enteredStudentId.equals("23-53354-3")) {
+                         AnikHome anik = new AnikHome();
+                         anik.setVisible(true);
+                     }
+                     if (enteredStudentId.equals("23-54025-3")) {
+                         TasaufHome tasauf = new TasaufHome();
+                         tasauf.setVisible(true);
+                     }
 
                 } else {
                     JOptionPane.showMessageDialog(null, "Incorrect Username or Password");
