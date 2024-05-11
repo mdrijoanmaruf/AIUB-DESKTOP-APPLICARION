@@ -7,8 +7,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ShawonResult extends JFrame{
-    ShawonResult(){
+public class RijoanHome extends JFrame{
+    public RijoanHome(){
         init();
     }
     public void init(){
@@ -21,7 +21,7 @@ public class ShawonResult extends JFrame{
         this.setLocationRelativeTo(null);
 
         // Creating Background Image
-        ImageIcon backgroundImage = new ImageIcon("Img/Result.png");
+        ImageIcon backgroundImage = new ImageIcon("Img/RijoanHome.png");
         JLabel bgImage = new JLabel(backgroundImage);
         bgImage.setLayout(new BorderLayout());
         this.setContentPane(bgImage);
@@ -31,6 +31,7 @@ public class ShawonResult extends JFrame{
         c.setLayout(null);
 
         // Creating Navigtion side bar
+
         // Home
         Font buttonFont = new Font("Arial", Font.BOLD , 14);
         JButton home = new JButton("Home");
@@ -67,8 +68,8 @@ public class ShawonResult extends JFrame{
         c.add(result);
 
 
-        // Regestration
-        JButton regestration = new JButton("Regestration");
+        // Registration
+        JButton regestration = new JButton("Registration");
         regestration.setFont(buttonFont);
         regestration.setBounds(80,324,140,25);
         regestration.setBackground(Color.GRAY);
@@ -87,8 +88,8 @@ public class ShawonResult extends JFrame{
         // Home Button Action Listener
         home.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e){
-                ShawonPortalHome shawonHome = new ShawonPortalHome();
-                shawonHome.setVisible(true);
+                RijoanHome rijoanHome = new RijoanHome();
+                rijoanHome.setVisible(true);
                 dispose();
             }
         });
@@ -96,8 +97,8 @@ public class ShawonResult extends JFrame{
         // Profile Button Action Listener
         profile.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e){
-                ShawonPortal shawonHome = new ShawonPortal();
-                shawonHome.setVisible(true);
+                RijoanProfile rp = new RijoanProfile();
+                rp.setVisible(true);
                 dispose();
             }
         });
@@ -105,7 +106,7 @@ public class ShawonResult extends JFrame{
         // Courses Button Action Listener
         courses.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e){
-                Courses c1 = new Courses();
+                RijoanCourses c1 = new RijoanCourses();
                 c1.setVisible(true);
                 dispose();
             }
@@ -114,7 +115,7 @@ public class ShawonResult extends JFrame{
         // Result Button Action Listener
         result.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e){
-                ShawonResult cr1 = new ShawonResult();
+                RijoanResult cr1 = new RijoanResult();
                 cr1.setVisible(true);
                 dispose();
             }
@@ -123,7 +124,7 @@ public class ShawonResult extends JFrame{
         // Registration Button Action Listener
         regestration.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e){
-                RegestrationCourses r1 = new RegestrationCourses();
+                RijoanRegistration r1 = new RijoanRegistration();
                 r1.setVisible(true);
                 dispose();
             }
@@ -141,79 +142,5 @@ public class ShawonResult extends JFrame{
                 }
             }
         });
-
-        // Creating JLable for courses
-        JLabel courseDropDownTitle = new JLabel("Courses :");
-        courseDropDownTitle.setBounds(250,80,100,50);
-        courseDropDownTitle.setFont(new Font("Arial" , Font.BOLD , 20));
-        c.add(courseDropDownTitle);
-
-        // Courses Dropdown
-        String[] coursesArray = {"Introduction to Programming", "Introduction to Programming Lab",
-                "Physics 1", "Physics 1 Lab", "Math 1"};
-        JComboBox<String> courseDropdown = new JComboBox<>(coursesArray);
-        courseDropdown.setFont(new Font("Arial" , Font.PLAIN , 18));
-        courseDropdown.setBounds(350, 95, 300, 25);
-        c.add(courseDropdown);
-
-        // Creating JLable for courses
-        JLabel semesterDropDownTitle = new JLabel("Semester :");
-        semesterDropDownTitle.setBounds(700,80,110,50);
-        semesterDropDownTitle.setFont(new Font("Arial" , Font.BOLD , 20));
-        c.add(semesterDropDownTitle);
-
-        String[] semesterArray = {"Fall 23-24"};
-        JComboBox<String> semesterDropdown = new JComboBox<>(semesterArray);
-        semesterDropdown.setFont(new Font("Arial" , Font.PLAIN , 18));
-        semesterDropdown.setBounds(830, 95, 140, 25);
-        c.add(semesterDropdown);
-
-        // Create a JLabel for the initial image (IP.png)
-        ImageIcon initialImageIcon = new ImageIcon("Img/IP.png");
-        JLabel courseImageLabel = new JLabel(initialImageIcon);
-        courseImageLabel.setBounds(260, 170, initialImageIcon.getIconWidth(), initialImageIcon.getIconHeight());
-        c.add(courseImageLabel);
-
-// Action Listener for the Course Dropdown
-        courseDropdown.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                String selectedCourse = (String) courseDropdown.getSelectedItem();
-                String imagePath = "Img/";
-
-                // Determine the image path based on the selected course
-                switch (selectedCourse) {
-                    case "Introduction to Programming":
-                        imagePath += "IP.png";
-                        break;
-                    case "Math 1":
-                        imagePath += "Math1.png";
-                        break;
-                    case "Introduction to Programming Lab":
-                        imagePath += "IP_Lab.png";
-                        break;
-                    case "Physics 1":
-                        imagePath += "Physics1.png";
-                        break;
-                    case "Physics 1 Lab":
-                        imagePath += "Physics1_lab.png";
-                        break;
-                    default:
-                        imagePath += "IP.png";
-                        break;
-                }
-
-                // Update the JLabel with the selected course image
-                ImageIcon courseImage = new ImageIcon(imagePath);
-                courseImageLabel.setIcon(courseImage);
-            }
-        });
-
-
-
-    }
-
-    public static void main(String[] args) {
-        ShawonResult sr1 = new ShawonResult();
-        sr1.setVisible(true);
     }
 }

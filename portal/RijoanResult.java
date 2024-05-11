@@ -7,8 +7,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ShawonResult extends JFrame{
-    ShawonResult(){
+public class RijoanResult extends JFrame{
+    RijoanResult(){
         init();
     }
     public void init(){
@@ -87,8 +87,8 @@ public class ShawonResult extends JFrame{
         // Home Button Action Listener
         home.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e){
-                ShawonPortalHome shawonHome = new ShawonPortalHome();
-                shawonHome.setVisible(true);
+                RijoanHome rijoanHome = new RijoanHome();
+                rijoanHome.setVisible(true);
                 dispose();
             }
         });
@@ -96,8 +96,8 @@ public class ShawonResult extends JFrame{
         // Profile Button Action Listener
         profile.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e){
-                ShawonPortal shawonHome = new ShawonPortal();
-                shawonHome.setVisible(true);
+                RijoanProfile rp = new RijoanProfile();
+                rp.setVisible(true);
                 dispose();
             }
         });
@@ -105,7 +105,7 @@ public class ShawonResult extends JFrame{
         // Courses Button Action Listener
         courses.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e){
-                Courses c1 = new Courses();
+                RijoanCourses c1 = new RijoanCourses();
                 c1.setVisible(true);
                 dispose();
             }
@@ -114,7 +114,7 @@ public class ShawonResult extends JFrame{
         // Result Button Action Listener
         result.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e){
-                ShawonResult cr1 = new ShawonResult();
+                RijoanResult cr1 = new RijoanResult();
                 cr1.setVisible(true);
                 dispose();
             }
@@ -123,7 +123,7 @@ public class ShawonResult extends JFrame{
         // Registration Button Action Listener
         regestration.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e){
-                RegestrationCourses r1 = new RegestrationCourses();
+                RijoanRegistration r1 = new RijoanRegistration();
                 r1.setVisible(true);
                 dispose();
             }

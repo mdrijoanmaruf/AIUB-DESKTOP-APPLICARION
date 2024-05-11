@@ -14,6 +14,8 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import portal.RijoanHome;
 import portal.ShawonPortalHome;
 
 public class Login extends JFrame {
@@ -118,10 +120,10 @@ public class Login extends JFrame {
 
                 if (loginSuccessful) {
                     JOptionPane.showMessageDialog(null, "Log In Successful!");
-                    // if (enteredStudentId.equals("23-53347-3")) {
-                    //     RijoanPortal rijoan = new RijoanPortal();
-                    //     rijoan.setVisible(true); // Set the new frame visible
-                    // }
+                     if (enteredStudentId.equals("23-53347-3")) {
+                         RijoanHome rijoan = new RijoanHome();
+                         rijoan.setVisible(true); // Set the new frame visible
+                     }
                     if (enteredStudentId.equals("23-53193-3")) {
                         ShawonPortalHome shawon = new ShawonPortalHome();
                         shawon.setVisible(true);
