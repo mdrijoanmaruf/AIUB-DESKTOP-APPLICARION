@@ -5,12 +5,15 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class HomePage extends JFrame{
-    public HomePage(){
+public class HomePage extends JFrame
+{
+    public HomePage()
+    {
         init();
     }
 
-    public void init(){
+    public void init()
+    {
         // Creating frame
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1080, 680);
@@ -82,8 +85,10 @@ public class HomePage extends JFrame{
         c.add(contact);
 
         // Home Button Action Listener
-         home.addActionListener(new ActionListener() {
-        public void actionPerformed(ActionEvent e){
+        home.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
             HomePage h1 = new HomePage();
             h1.setVisible(true);
             dispose();
@@ -91,8 +96,10 @@ public class HomePage extends JFrame{
         });
         
         // About Button Action Listener
-        about.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e){
+        about.addActionListener(new ActionListener() 
+        {
+            public void actionPerformed(ActionEvent
+            {
                 About h1 = new About();
                 h1.setVisible(true);
                 dispose();
@@ -101,17 +108,21 @@ public class HomePage extends JFrame{
 
 
         // Admission Button Action Listener
-         admission.addActionListener(new ActionListener() {
-        public void actionPerformed(ActionEvent e){
+        admission.addActionListener(new ActionListener() 
+        {
+        public void actionPerformed(ActionEvent e)
+        {
             Admission a1 = new Admission();
             a1.setVisible(true);
             dispose();
         }
         });
 
-         // Contact Button Action Listener
-         contact.addActionListener(new ActionListener() {
-        public void actionPerformed(ActionEvent e){
+        // Contact Button Action Listener
+        contact.addActionListener(new ActionListener() 
+        {
+        public void actionPerformed(ActionEvent e)
+        {
             Contact c1 = new Contact();
             c1.setVisible(true);
             dispose();
@@ -119,8 +130,10 @@ public class HomePage extends JFrame{
         });
 
         // Log In Button Action Listener
-         login.addActionListener(new ActionListener() {
-        public void actionPerformed(ActionEvent e){
+        login.addActionListener(new ActionListener()
+        {
+        public void actionPerformed(ActionEvent e)
+        {
             Login l1 = new Login();
             l1.setVisible(true);
             dispose();
