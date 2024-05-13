@@ -5,24 +5,26 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public  class Contact extends JFrame {
+public class Contact extends JFrame {
+    private JLabel bgImage;
+
     public Contact(){
         init();
     }
+
     public void init(){
         // Creating frame
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1080, 680);
         this.setResizable(false);
-        this.setVisible(true);
-        this.setResizable(false);
         this.setLocationRelativeTo(null);
 
         // Creating Background Image
-        ImageIcon backgroundImage = new ImageIcon("Img/Contact.png");
-        JLabel bgImage = new JLabel(backgroundImage);
+        ImageIcon backgroundImage = new ImageIcon("Img/ContactHome.png");
+        bgImage = new JLabel(backgroundImage);
         bgImage.setLayout(new BorderLayout());
-        this.setContentPane(bgImage);
+        bgImage.setBounds(215, -20, 865, 680); // Set bounds for the background image
+        this.add(bgImage);
 
         // Creating Container
         Container c = this.getContentPane();
@@ -60,7 +62,7 @@ public  class Contact extends JFrame {
         fass.setForeground(Color.WHITE);
         c.add(fass);
 
-        // FASS
+        // IT
         JButton it = new JButton("IT Support");
         it.setFont(new Font("Arial" , Font.BOLD , 20));
         it.setBounds(40,440,140,30);
@@ -71,11 +73,43 @@ public  class Contact extends JFrame {
         // Back to Home button Action Listener
         backToHome.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e){
-                HomePage h2 = new HomePage();
-                h2.setVisible(true);
+                HomePage h1 = new HomePage();
+                h1.setVisible(true);
                 dispose();
             }
         });
+
+        // Action Listeners for changing images
+        fst.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
+                changeImage("Img/FST.png");
+            }
+        });
+
+        fba.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
+                changeImage("Img/FBA.png");
+            }
+        });
+
+        fass.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
+                changeImage("Img/FASS.png");
+            }
+        });
+
+        it.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
+                changeImage("Img/IT.png");
+            }
+        });
+    }
+
+
+    // Method to change the background image
+    private void changeImage(String imagePath) {
+        ImageIcon newBackgroundImage = new ImageIcon(imagePath);
+        bgImage.setIcon(newBackgroundImage);
     }
 
     public static void main(String[] args) {
