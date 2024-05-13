@@ -91,9 +91,13 @@ public class HomePage extends JFrame{
         });
         
         // About Button Action Listener
-
-
-
+        about.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
+                About h1 = new About();
+                h1.setVisible(true);
+                dispose();
+            }
+        });
 
 
         // Admission Button Action Listener
@@ -104,6 +108,16 @@ public class HomePage extends JFrame{
             dispose();
         }
         });
+
+         // Contact Button Action Listener
+         contact.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e){
+            Contact c1 = new Contact();
+            c1.setVisible(true);
+            dispose();
+        }
+        });
+
         // Log In Button Action Listener
          login.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e){

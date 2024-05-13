@@ -477,4 +477,9 @@ public class Admission extends JFrame {
 		}
 		
 	}
+
+	public static void main(String[] args) {
+		Admission an = new Admission();
+		an.setVisible(true);
+	}
 }
