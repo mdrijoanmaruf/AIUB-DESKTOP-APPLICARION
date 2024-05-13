@@ -5,15 +5,12 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class WhyStudy extends JFrame 
-{
-    public WhyStudy()
-    {
+public class WhyStudy extends JFrame {
+    public WhyStudy(){
         init();
     }
 
-    public void init()
-    {
+    public void init(){
         // Creating frame
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1080, 680);

@@ -142,29 +142,37 @@ public class RijoanResult extends JFrame{
             }
         });
 
-        // Creating JLable for courses
+        // Creating JLabel for courses
         JLabel courseDropDownTitle = new JLabel("Courses :");
-        courseDropDownTitle.setBounds(250,80,100,50);
-        courseDropDownTitle.setFont(new Font("Arial" , Font.BOLD , 20));
+        courseDropDownTitle.setBounds(250, 80, 100, 50);
+        courseDropDownTitle.setFont(new Font("Arial", Font.BOLD, 20));
         c.add(courseDropDownTitle);
 
         // Courses Dropdown
         String[] coursesArray = {"Introduction to Programming", "Introduction to Programming Lab",
                 "Physics 1", "Physics 1 Lab", "Math 1"};
         JComboBox<String> courseDropdown = new JComboBox<>(coursesArray);
-        courseDropdown.setFont(new Font("Arial" , Font.PLAIN , 18));
+        courseDropdown.setFont(new Font("Arial", Font.PLAIN, 18));
         courseDropdown.setBounds(350, 95, 300, 25);
         c.add(courseDropdown);
 
-        // Creating JLable for courses
+        // Courses Dropdown
+        String[] coursesArray1 = {"Discrete Mathematics", "Physics 2",
+                "OOP1", "English 2", "Math 2"};
+        JComboBox<String> courseDropdown1 = new JComboBox<>(coursesArray1);
+        courseDropdown1.setFont(new Font("Arial", Font.PLAIN, 18));
+        courseDropdown1.setBounds(350, 95, 300, 25);
+        c.add(courseDropdown);
+
+        // Creating JLabel for semester
         JLabel semesterDropDownTitle = new JLabel("Semester :");
-        semesterDropDownTitle.setBounds(700,80,110,50);
-        semesterDropDownTitle.setFont(new Font("Arial" , Font.BOLD , 20));
+        semesterDropDownTitle.setBounds(700, 80, 110, 50);
+        semesterDropDownTitle.setFont(new Font("Arial", Font.BOLD, 20));
         c.add(semesterDropDownTitle);
 
-        String[] semesterArray = {"Fall 23-24"};
+        String[] semesterArray = {"Fall 23-24", "Winter 23-24"};
         JComboBox<String> semesterDropdown = new JComboBox<>(semesterArray);
-        semesterDropdown.setFont(new Font("Arial" , Font.PLAIN , 18));
+        semesterDropdown.setFont(new Font("Arial", Font.PLAIN, 18));
         semesterDropdown.setBounds(830, 95, 140, 25);
         c.add(semesterDropdown);
 
@@ -174,7 +182,26 @@ public class RijoanResult extends JFrame{
         courseImageLabel.setBounds(260, 170, initialImageIcon.getIconWidth(), initialImageIcon.getIconHeight());
         c.add(courseImageLabel);
 
-// Action Listener for the Course Dropdown
+        // Action Listener for the Semester Dropdown
+        semesterDropdown.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String selectedSemester = (String) semesterDropdown.getSelectedItem();
+                if (selectedSemester.equals("Fall 23-24")) {
+                    courseDropdown.setModel(new DefaultComboBoxModel<>(coursesArray));
+                    String imagePath = "Img/IP.png";
+                    ImageIcon courseImage = new ImageIcon(imagePath);
+                    courseImageLabel.setIcon(courseImage);
+                } else if (selectedSemester.equals("Winter 23-24")) {
+                    courseDropdown.setModel(new DefaultComboBoxModel<>(coursesArray1));
+                    String imagePath = "Img/DM.png";
+                    ImageIcon courseImage = new ImageIcon(imagePath);
+                    courseImageLabel.setIcon(courseImage);
+                }
+            }
+        });
+
+
+        // Action Listener for the Course Dropdown
         courseDropdown.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String selectedCourse = (String) courseDropdown.getSelectedItem();
@@ -197,6 +224,21 @@ public class RijoanResult extends JFrame{
                     case "Physics 1 Lab":
                         imagePath += "Physics1_lab.png";
                         break;
+                    case "Discrete Mathematics":
+                        imagePath += "DM.png";
+                        break;
+                    case "Physics 2":
+                        imagePath += "Physics2.png";
+                        break;
+                    case "Math 2":
+                        imagePath += "math2.png";
+                        break;
+                    case "English 2":
+                        imagePath += "English2.png";
+                        break;
+                    case "OOP1":
+                        imagePath += "OOP1.png";
+                        break;
                     default:
                         imagePath += "IP.png";
                         break;
@@ -207,7 +249,6 @@ public class RijoanResult extends JFrame{
                 courseImageLabel.setIcon(courseImage);
             }
         });
-
 
 
     }

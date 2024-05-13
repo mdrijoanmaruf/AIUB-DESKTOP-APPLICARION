@@ -5,14 +5,11 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public  class About extends JFrame 
-{
-    public About()
-    {
+public  class About extends JFrame {
+    public About(){
         init();
     }
-    public void init()
-    {
+    public void init(){
         // Creating frame
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1080, 680);
@@ -92,10 +89,8 @@ public  class About extends JFrame
 
 
         // Back to Home button Action Listener
-        backToHome.addActionListener(new ActionListener() 
-        {
-            public void actionPerformed(ActionEvent e)
-            {
+        backToHome.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
                 HomePage h2 = new HomePage();
                 h2.setVisible(true);
                 dispose();
@@ -103,10 +98,8 @@ public  class About extends JFrame
         });
 
         // sm1 button Action Listener
-        sm1.addActionListener(new ActionListener() 
-        {
-            public void actionPerformed(ActionEvent e)
-            {
+        sm1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
                 Information h2 = new Information();
                 h2.setVisible(true);
                 dispose();
@@ -114,10 +107,8 @@ public  class About extends JFrame
         });
 
         // sm2 button Action Listener
-        sm2.addActionListener(new ActionListener() 
-        {
-            public void actionPerformed(ActionEvent e)
-            {
+        sm2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
                 GInformation h2 = new GInformation();
                 h2.setVisible(true);
                 dispose();
@@ -125,10 +116,8 @@ public  class About extends JFrame
         });
 
         // sm3 button Action Listener
-        sm3.addActionListener(new ActionListener()
-        {
-            public void actionPerformed(ActionEvent e)
-            {
+        sm3.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
                 WhyStudy h2 = new WhyStudy();
                 h2.setVisible(true);
                 dispose();
@@ -136,10 +125,8 @@ public  class About extends JFrame
         });
 
         // sm4 button Action Listener
-        sm4.addActionListener(new ActionListener() 
-        {
-            public void actionPerformed(ActionEvent e)
-            {
+        sm4.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
                 Resources h2 = new Resources();
                 h2.setVisible(true);
                 dispose();
@@ -147,10 +134,8 @@ public  class About extends JFrame
         });
 
         // sm5 button Action Listener
-        sm5.addActionListener(new ActionListener()
-        {
-            public void actionPerformed(ActionEvent e)
-            {
+        sm5.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
                 Career h2 = new Career();
                 h2.setVisible(true);
                 dispose();
@@ -158,10 +143,8 @@ public  class About extends JFrame
         });
 
         // sm6 button Action Listener
-        sm6.addActionListener(new ActionListener()
-        {
-            public void actionPerformed(ActionEvent e)
-            {
+        sm6.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
                 Convocation h2 = new Convocation();
                 h2.setVisible(true);
                 dispose();
@@ -170,8 +153,7 @@ public  class About extends JFrame
 
     }
 
-    public static void main(String[] args) 
-    {
+    public static void main(String[] args) {
         About c1 = new About();
         c1.setVisible(true);
     }

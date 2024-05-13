@@ -17,18 +17,15 @@ import java.awt.event.ActionListener;
 
 import portal.*;
 
-public class Login extends JFrame 
-{
+public class Login extends JFrame {
     String[] studentId = { "23-53347-3", "23-53193-3", "23-53354-3", "23-54025-3" };
     String[] passwordlist = { "maruf", "shawon", "anik", "tasauf" };
 
-    public Login()
-    {
+    public Login(){
         init();
     }
-    public void init()
-    {
-        // Creating frame
+    public void init(){
+         // Creating frame
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1080, 680);
         this.setResizable(false);

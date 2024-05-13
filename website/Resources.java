@@ -5,15 +5,12 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Resources extends JFrame 
-{
-    public Resources()
-    {
+public class Resources extends JFrame {
+    public Resources(){
         init();
     }
 
-    public void init()
-    {
+    public void init(){
         // Creating frame
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1080, 680);
