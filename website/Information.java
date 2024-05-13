@@ -5,12 +5,15 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Information extends JFrame {
-    public Information(){
+public class Information extends JFrame 
+{
+    public Information()
+    {
         init();
     }
 
-    public void init(){
+    public void init()
+    {
         // Creating frame
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1080, 680);
@@ -39,8 +42,10 @@ public class Information extends JFrame {
 
 
         // Back to Home button Action Listener
-        backToHome.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e){
+        backToHome.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
                 About h2 = new About();
                 h2.setVisible(true);
                 dispose();
