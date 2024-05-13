@@ -8,7 +8,8 @@ import java.io.FileWriter;
 import javax.swing.table.DefaultTableModel; 
 
 
-public class Admission extends JFrame { 
+public class Admission extends JFrame 
+{ 
 
 	private JLabel labeL1, labeL2, labeL3, labeL4, labeL5, labeL6, labeL7, labeL8, labeL9, labeL10, labeL11, labeL12, labeL13, labeL14, labeL15; 
 
@@ -33,8 +34,8 @@ public class Admission extends JFrame {
 	} 
 	public void init()
 	{
-		// Creating Frame
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	// Creating Frame
+	this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1080, 680);
         this.setResizable(false);
         this.setVisible(true);
@@ -60,8 +61,10 @@ public class Admission extends JFrame {
         c.add(backToHome);
 
         // Back to Home button Action Listenter
-        backToHome.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e){
+        backToHome.addActionListener(new ActionListener() 
+	{
+            public void actionPerformed(ActionEvent e)
+		{
                 HomePage h2 = new HomePage();
                 h2.setVisible(true);
                 dispose();
@@ -97,7 +100,7 @@ public class Admission extends JFrame {
 		tf2 = new JTextField(); 
 		tf2.setBounds(240, 130, 200, 30); 
       
-	    //Creat Label 4
+	    	//Creat Label 4
 		labeL4 = new JLabel("Name of the Mother:"); 
 		labeL4.setBounds(100, 170, 200, 30);  
 		labeL4.setForeground(Color.BLACK);
@@ -199,7 +202,7 @@ public class Admission extends JFrame {
 		tf7 = new JTextField("5.00"); 
 		tf7.setBounds(240, 490, 200, 30); 
        
-	    // create Label 14
+	    	// create Label 14
 		labeL14 = new JLabel("HSC GPA :"); 
 		labeL14.setBounds(100, 530, 200, 30); 
 		labeL14.setForeground(Color.BLACK);
@@ -224,7 +227,7 @@ public class Admission extends JFrame {
 		JList list = new JList();
 		list.setBounds(600, 350, 350, 125); 
 
-        // Generate Receipt Button
+        	// Generate Receipt Button
 		JButton Receipt = new JButton("Generate Receipt"); 
 		Receipt.setBounds(500, 360, 200, 30); 
 		Receipt.setBackground(new Color(0, 78, 162));
@@ -334,7 +337,8 @@ public class Admission extends JFrame {
 		cb4.setBounds(770, 110, 130, 20); 
 		c.add(cb4);
 		// Reset the text fields 
-		resetButton.addActionListener( new ActionListener() { 
+		resetButton.addActionListener( new ActionListener() 
+		{ 
 				public void actionPerformed( ActionEvent e) 
 				{ 
 					area2.setText(""); 
@@ -349,7 +353,8 @@ public class Admission extends JFrame {
 			}); 
 
 		// Implementing the Print action  
-		Print.addActionListener( new ActionListener() { 
+		Print.addActionListener( new ActionListener() 
+		{ 
 				public void actionPerformed( ActionEvent e) 
 				{ 
 					try { 
@@ -362,7 +367,8 @@ public class Admission extends JFrame {
 			}); 
 
 		// Generating the receipt 
-		Receipt.addActionListener(new ActionListener() { 
+		Receipt.addActionListener(new ActionListener()
+		{ 
 			public void actionPerformed(ActionEvent e) 
 			{ 
 
@@ -393,7 +399,8 @@ public class Admission extends JFrame {
 				
 				area2.setText(area2.getText() + "Wants to take: "+ cb.getSelectedItem() .toString() + "\n"); 
 				
-				if (e.getSource() == Receipt) { 
+				if (e.getSource() == Receipt) 
+				{ 
 					try { 
 						FileWriter fw = new FileWriter( "StudentRecipt.txt"); 
 						fw.write(area2.getText()); 
