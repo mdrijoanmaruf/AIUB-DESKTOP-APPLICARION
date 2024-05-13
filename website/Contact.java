@@ -5,11 +5,14 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public  class Contact extends JFrame {
-    public Contact(){
+public  class Contact extends JFrame 
+{
+    public Contact()
+    {
         init();
     }
-    public void init(){
+    public void init()
+    {
         // Creating frame
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1080, 680);
@@ -69,8 +72,10 @@ public  class Contact extends JFrame {
         c.add(it);
 
         // Back to Home button Action Listener
-        backToHome.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e){
+        backToHome.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
                 HomePage h2 = new HomePage();
                 h2.setVisible(true);
                 dispose();
@@ -78,7 +83,8 @@ public  class Contact extends JFrame {
         });
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         Contact c1 = new Contact();
         c1.setVisible(true);
     }
