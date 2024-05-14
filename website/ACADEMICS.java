@@ -1,5 +1,5 @@
 package website;
-
+import javax.swing.ImageIcon;
 import javax.swing.*;
 import java.awt.*;
 import java.lang.*;
@@ -7,7 +7,13 @@ import java.lang.*;
 class ACADEMICS extends JFrame {
     JPanel panel;
 
-    ImageIcon img,picture;
+    ImageIcon calenderIcon;
+    ImageIcon backIcon;
+    ImageIcon coinIcon;
+    ImageIcon listIcon;
+    ImageIcon groupIcon;
+
+
     JButton B1;
 
     ;
@@ -16,11 +22,14 @@ class ACADEMICS extends JFrame {
         this.setSize(1080, 680);
         this.setLocation(100, 60);
 
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("website/back.png"));
-        Image i2 = i1.getImage().getScaledInstance(1080,680,Image.SCALE_DEFAULT);
-        ImageIcon i3 = new ImageIcon(i2);
-        JLabel img = new JLabel(i3);
+        backIcon = new ImageIcon("back.png");
+        JLabel img = new JLabel(backIcon);
         add(img);
+//        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("website/back.png"));
+//        Image i2 = i1.getImage().getScaledInstance(1080,680,Image.SCALE_DEFAULT);
+//        ImageIcon i3 = new ImageIcon(i2);
+//        JLabel img = new JLabel(i3);
+//        add(img);
 
          panel = new JPanel();
          panel.setLayout(null);
@@ -35,9 +44,13 @@ class ACADEMICS extends JFrame {
          newinfo.setBackground(Color.BLACK);
          mb.add(newinfo);
 
+
          JMenuItem info1 = new JMenuItem("Academic calender");
          info1.setBackground(Color.white);
-          newinfo.add(info1);
+         newinfo.add(info1);
+         calenderIcon = new ImageIcon("calender.png");
+         info1.setIcon(calenderIcon);
+
 
         JMenuItem info2 = new JMenuItem("Academic Regulations ");
         info2.setBackground(Color.white);
