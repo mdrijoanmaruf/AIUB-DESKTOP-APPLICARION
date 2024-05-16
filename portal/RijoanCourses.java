@@ -77,7 +77,7 @@ public class RijoanCourses extends JFrame {
         this.setLocationRelativeTo(null);
 
         // Creating Background Image
-        ImageIcon backgroundImage = new ImageIcon("Img/Regestration.png");
+        ImageIcon backgroundImage = new ImageIcon("Img/Offered_course.png");
         JLabel bgImage = new JLabel(backgroundImage);
         bgImage.setLayout(new BorderLayout());
         this.setContentPane(bgImage);

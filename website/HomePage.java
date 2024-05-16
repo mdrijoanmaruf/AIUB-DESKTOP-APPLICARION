@@ -65,6 +65,7 @@ public class HomePage extends JFrame{
         academics.setForeground(Color.WHITE);
         c.add(academics);
 
+
         // Log In
         JButton login = new JButton("Log In");
         login.setFont(navberFont);
@@ -104,6 +105,15 @@ public class HomePage extends JFrame{
          admission.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e){
             Admission a1 = new Admission();
+            a1.setVisible(true);
+            dispose();
+        }
+        });
+
+        // Admission Button Action Listener
+         academics.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e){
+            Academics a1 = new Academics();
             a1.setVisible(true);
             dispose();
         }

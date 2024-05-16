@@ -134,7 +134,7 @@ public class Admission extends JFrame {
 
 		area1 = new JTextArea("Block C , Road 7 , Bashundhara R/A"); 
 		area1.setBounds(240, 290, 200, 30); 
-		// area1.setBackground(Color.LIGHT_GRAY);
+
 		//Create Label 9
 		labeL9 = new JLabel("Gender:"); 
 		labeL9.setBounds(100, 330, 250, 30);
@@ -432,7 +432,7 @@ public class Admission extends JFrame {
 				rowsData [2] = tf5.getText();
 				rowsData [3] = tf6.getText();
 				model.addRow(rowsData);
-				JOptionPane.showMessageDialog(null ,"Successfully Submited"); 
+				JOptionPane.showMessageDialog(null ,"Successfully Submitted");
 			}
 			else if(e.getSource() == clearButton)
 			{

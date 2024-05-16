@@ -67,8 +67,8 @@ public class AnikResult extends JFrame{
         c.add(result);
 
 
-        // Regestration
-        JButton regestration = new JButton("Regestration");
+        // Registration
+        JButton regestration = new JButton("Registration");
         regestration.setFont(buttonFont);
         regestration.setBounds(80,324,140,25);
         regestration.setBackground(Color.GRAY);

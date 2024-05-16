@@ -153,8 +153,4 @@ public  class About extends JFrame {
 
     }
 
-    public static void main(String[] args) {
-        About c1 = new About();
-        c1.setVisible(true);
-    }
 }

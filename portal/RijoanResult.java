@@ -170,7 +170,7 @@ public class RijoanResult extends JFrame{
         semesterDropDownTitle.setFont(new Font("Arial", Font.BOLD, 20));
         c.add(semesterDropDownTitle);
 
-        String[] semesterArray = {"Fall 23-24", "Winter 23-24"};
+        String[] semesterArray = {"Fall 23-24", "Spring 23-24"};
         JComboBox<String> semesterDropdown = new JComboBox<>(semesterArray);
         semesterDropdown.setFont(new Font("Arial", Font.PLAIN, 18));
         semesterDropdown.setBounds(830, 95, 140, 25);
@@ -191,7 +191,7 @@ public class RijoanResult extends JFrame{
                     String imagePath = "Img/IP.png";
                     ImageIcon courseImage = new ImageIcon(imagePath);
                     courseImageLabel.setIcon(courseImage);
-                } else if (selectedSemester.equals("Winter 23-24")) {
+                } else if (selectedSemester.equals("Spring 23-24")) {
                     courseDropdown.setModel(new DefaultComboBoxModel<>(coursesArray1));
                     String imagePath = "Img/DM.png";
                     ImageIcon courseImage = new ImageIcon(imagePath);
