@@ -230,7 +230,7 @@ public class Admission extends JFrame {
 		Receipt.setBackground(new Color(0, 78, 162));
 		Receipt.setForeground(Color.WHITE);
 		
-		//ResetButtion
+		//ResetButton
 		JButton resetButton = new JButton("Reset"); 
 		resetButton.setBounds(700, 360, 150, 30); // add 150
 		resetButton.setBackground(new Color(0, 78, 162));
@@ -245,7 +245,7 @@ public class Admission extends JFrame {
 		area2.setBounds(450, 395, 600, 180); 
 		//area2.setBackground(Color.LIGHT_GRAY);
 		
-		//Create JButton
+		//Submit JButton
 		addButton = new JButton("Submit");
 		addButton.setBounds(190, 580, 150, 30);
 		addButton.setBackground(Color.GRAY);
@@ -427,12 +427,20 @@ public class Admission extends JFrame {
 		{
 			if(e.getSource() == addButton)
 			{
-				rowsData [0] = tf1.getText(); 
-				rowsData [1] = tf4.getText();
-				rowsData [2] = tf5.getText();
-				rowsData [3] = tf6.getText();
-				model.addRow(rowsData);
-				JOptionPane.showMessageDialog(null ,"Successfully Submitted");
+				if (tf1.getText().isEmpty() || tf2.getText().isEmpty() || tf3.getText().isEmpty() ||
+						tf4.getText().isEmpty() || tf5.getText().isEmpty() || tf6.getText().isEmpty() ||
+						tf7.getText().isEmpty() || tf8.getText().isEmpty() || tf9.getText().isEmpty() ||
+						tf10.getText().isEmpty()) {
+					JOptionPane.showMessageDialog(null, "Please fill the full form");
+				} else {
+					// If all fields are filled, proceed with adding the data
+					rowsData[0] = tf1.getText();
+					rowsData[1] = tf4.getText();
+					rowsData[2] = tf5.getText();
+					rowsData[3] = tf6.getText();
+					model.addRow(rowsData);
+					JOptionPane.showMessageDialog(null, "Successfully Submitted");
+				}
 			}
 			else if(e.getSource() == clearButton)
 			{
@@ -449,31 +457,32 @@ public class Admission extends JFrame {
 			}
 			else if(e.getSource() == deleteButton)
 			{
-				int numberOfRow = table.getSelectedRow(); 
-				
+				int numberOfRow = table.getSelectedRow();
+
 				if(numberOfRow >= 0)
 				{
 					model.removeRow(numberOfRow);
 				}
 				else
 				{
-					JOptionPane.showMessageDialog(null,"No Row hasbeen Selected"); 
+					JOptionPane.showMessageDialog(null,"No Row hasbeen Selected");
 				}
 			}
 			else if(e.getSource() == updateButton)
 			{
-				int numOfRow = table.getSelectedRow(); 
+
+				int numOfRow = table.getSelectedRow();
 				String studentName = tf1.getText();
 				String studentEmil = tf4.getText();
-				String studenPhone = tf5.getText();  
+				String studenPhone = tf5.getText();
 				String studentNationality = tf6.getText();
-				
-				model.setValueAt(studentName,numOfRow,0); 
-				model.setValueAt(studentEmil,numOfRow,1);  
-				model.setValueAt(studenPhone,numOfRow,2); 
-				model.setValueAt( studentNationality,numOfRow,3); 
+
+				model.setValueAt(studentName,numOfRow,0);
+				model.setValueAt(studentEmil,numOfRow,1);
+				model.setValueAt(studenPhone,numOfRow,2);
+				model.setValueAt( studentNationality,numOfRow,3);
 			}
-		
+
 		}
 		
 	}
