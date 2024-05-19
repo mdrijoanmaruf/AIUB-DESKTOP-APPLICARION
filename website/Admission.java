@@ -10,6 +10,13 @@ import javax.swing.table.DefaultTableModel;
 
 public class Admission extends JFrame {
 
+	String[] tableEmail = new String[5];
+	String[] tablePhoneNumber = new String[5];
+	private int size = 5;
+	private int emailIndex = 0;
+	private int phoneNumberIndex = 0;
+
+
 	private JLabel labeL1, labeL2, labeL3, labeL4, labeL5, labeL6, labeL7, labeL8, labeL9, labeL10, labeL11, labeL12, labeL13, labeL14, labeL15;
 
 	private JTextField tf1, tf2, tf3, tf4, tf5, tf6, tf7, tf8, tf9, tf10;
@@ -425,13 +432,49 @@ public class Admission extends JFrame {
 		// submit button
 		public void actionPerformed(ActionEvent e) {
 			if (e.getSource() == addButton) {
-				// Check if any of the required fields are empty
+				String name = tf1.getText();
+				String email = tf4.getText();
+				String phoneNumber = tf5.getText();
+				String nationality = tf6.getText();
+
+				boolean emailExists = false;
+				boolean phoneNumberExists = false;
+
+				// Check if email or phone number already exists
+				for (int i = 0; i < emailIndex; i++) {
+					if (tableEmail[i].equals(email)) {
+						emailExists = true;
+						break;
+					}
+				}
+
+				for (int i = 0; i < phoneNumberIndex; i++) {
+					if (tablePhoneNumber[i].equals(phoneNumber)) {
+						phoneNumberExists = true;
+						break;
+					}
+				}
+
+				if (emailExists) {
+					JOptionPane.showMessageDialog(null, "This email is already registered.");
+				} else if (phoneNumberExists) {
+					JOptionPane.showMessageDialog(null, "This phone number is already registered.");
+				} else{
 				if (tf1.getText().isEmpty() || tf2.getText().isEmpty() || tf3.getText().isEmpty() ||
 						tf4.getText().isEmpty() || tf5.getText().isEmpty() || tf6.getText().isEmpty() ||
 						tf7.getText().isEmpty() || tf8.getText().isEmpty()) {
 					JOptionPane.showMessageDialog(null, "Please fill the full form");
 				} else {
-					// If all fields are filled, proceed with adding the data
+
+					// Add data to the arrays
+					tableEmail[emailIndex] = email;
+					tablePhoneNumber[phoneNumberIndex] = phoneNumber;
+
+					// Increment the index for the next entry
+					emailIndex++;
+					phoneNumberIndex++;
+
+
 					rowsData[0] = tf1.getText();
 					rowsData[1] = tf4.getText();
 					rowsData[2] = tf5.getText();
@@ -439,7 +482,7 @@ public class Admission extends JFrame {
 					model.addRow(rowsData);
 					JOptionPane.showMessageDialog(null, "Successfully Submitted");
 				}
-			}
+			}}
 			// Other actions for clearButton, deleteButton, and updateButton...
 			else if (e.getSource() == clearButton) {
 				tf1.setText("");

@@ -53,13 +53,13 @@ public class Admin extends JFrame {
         // Create JLabel for "Student List"
         JLabel studentDetailsLabel = new JLabel("Student List : ");
         studentDetailsLabel.setFont(new Font("Arial", Font.BOLD, 24));
-        studentDetailsLabel.setBounds(50, 70, 250, 30);
+        studentDetailsLabel.setBounds(50, 85, 250, 30);
         c.add(studentDetailsLabel);
 
         // Create "Check Result" button
         JButton checkResultButton = new JButton("Check Result");
         checkResultButton.setFont(new Font("Arial", Font.BOLD, 20));
-        checkResultButton.setBounds(900-50, 70, 160, 30); // Adjusted position between label and table
+        checkResultButton.setBounds(900-50, 85, 160, 30); // Adjusted position between label and table
         checkResultButton.setBackground(Color.GRAY);
         checkResultButton.setForeground(Color.WHITE);
         c.add(checkResultButton);
@@ -67,7 +67,7 @@ public class Admin extends JFrame {
         // Create "Student Information" button
         JButton studentInfoButton = new JButton("Student Information");
         studentInfoButton.setFont(new Font("Arial", Font.BOLD, 20));
-        studentInfoButton.setBounds(checkResultButton.getX() - 300, 70, 250, 30); // Positioned 150 pixels left of checkResultButton
+        studentInfoButton.setBounds(checkResultButton.getX() - 300, 85, 250, 30); // Positioned 150 pixels left of checkResultButton
         studentInfoButton.setBackground(Color.GRAY);
         studentInfoButton.setForeground(Color.WHITE);
         c.add(studentInfoButton);
